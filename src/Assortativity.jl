@@ -9,6 +9,8 @@ export
 	JSON_edge,
 	# measures
 	assortativity,
+	second_neighbour_assortativity,
+	excess_degree_assortativity,
 	# noise
 	random_edge_rewiring,
 	random_network,
