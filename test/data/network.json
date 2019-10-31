@@ -1,0 +1,281 @@
+{
+    "nodes": [
+        {
+            "label": "G3",
+            "group": "Other",
+            "group_index": 9
+        },
+        {
+            "label": "G5",
+            "group": "Other",
+            "group_index": 9
+        },
+        {
+            "label": "G9",
+            "group": "Other",
+            "group_index": 9
+        },
+        {
+            "label": "G4",
+            "group": "Other",
+            "group_index": 9
+        },
+        {
+            "label": "G1",
+            "group": "Other",
+            "group_index": 9
+        },
+        {
+            "label": "G2",
+            "group": "Other",
+            "group_index": 9
+        },
+        {
+            "label": "G7",
+            "group": "Other",
+            "group_index": 9
+        },
+        {
+            "label": "G10",
+            "group": "Other",
+            "group_index": 9
+        },
+        {
+            "label": "G6",
+            "group": "Other",
+            "group_index": 9
+        },
+        {
+            "label": "G8",
+            "group": "Other",
+            "group_index": 9
+        }
+    ],
+    "edges": [
+        {
+            "source": "G1",
+            "destination": "G4",
+            "weight": 0.2972651133683286
+        },
+        {
+            "source": "G1",
+            "destination": "G5",
+            "weight": 0.2093983431511747
+        },
+        {
+            "source": "G1",
+            "destination": "G3",
+            "weight": 0.17207131726751704
+        },
+        {
+            "source": "G7",
+            "destination": "G8",
+            "weight": 0.15915895034564675
+        },
+        {
+            "source": "G1",
+            "destination": "G2",
+            "weight": 0.1517650184355974
+        },
+        {
+            "source": "G4",
+            "destination": "G7",
+            "weight": 0.14009983869409692
+        },
+        {
+            "source": "G2",
+            "destination": "G4",
+            "weight": 0.11994328630294923
+        },
+        {
+            "source": "G5",
+            "destination": "G7",
+            "weight": 0.10700990283920786
+        },
+        {
+            "source": "G1",
+            "destination": "G7",
+            "weight": 0.10431286918719869
+        },
+        {
+            "source": "G2",
+            "destination": "G6",
+            "weight": 0.09193628295974568
+        },
+        {
+            "source": "G2",
+            "destination": "G5",
+            "weight": 0.08023337300143146
+        },
+        {
+            "source": "G2",
+            "destination": "G7",
+            "weight": 0.07832899922628239
+        },
+        {
+            "source": "G1",
+            "destination": "G10",
+            "weight": 0.07531598624597492
+        },
+        {
+            "source": "G4",
+            "destination": "G5",
+            "weight": 0.07476961537709453
+        },
+        {
+            "source": "G3",
+            "destination": "G9",
+            "weight": 0.0720293159851942
+        },
+        {
+            "source": "G3",
+            "destination": "G5",
+            "weight": 0.07162106052093117
+        },
+        {
+            "source": "G7",
+            "destination": "G10",
+            "weight": 0.07142626936270247
+        },
+        {
+            "source": "G1",
+            "destination": "G8",
+            "weight": 0.06425092970206056
+        },
+        {
+            "source": "G6",
+            "destination": "G8",
+            "weight": 0.0571789003283044
+        },
+        {
+            "source": "G6",
+            "destination": "G9",
+            "weight": 0.05267559645743344
+        },
+        {
+            "source": "G6",
+            "destination": "G7",
+            "weight": 0.05100016774509256
+        },
+        {
+            "source": "G8",
+            "destination": "G9",
+            "weight": 0.048621943124058674
+        },
+        {
+            "source": "G3",
+            "destination": "G10",
+            "weight": 0.048110110685886304
+        },
+        {
+            "source": "G2",
+            "destination": "G10",
+            "weight": 0.041538503170178466
+        },
+        {
+            "source": "G4",
+            "destination": "G6",
+            "weight": 0.04050102074603286
+        },
+        {
+            "source": "G5",
+            "destination": "G8",
+            "weight": 0.039757569897704376
+        },
+        {
+            "source": "G3",
+            "destination": "G8",
+            "weight": 0.039181414036392914
+        },
+        {
+            "source": "G3",
+            "destination": "G7",
+            "weight": 0.03782205830194409
+        },
+        {
+            "source": "G5",
+            "destination": "G6",
+            "weight": 0.037703175300145324
+        },
+        {
+            "source": "G6",
+            "destination": "G10",
+            "weight": 0.035313750048593294
+        },
+        {
+            "source": "G7",
+            "destination": "G9",
+            "weight": 0.03393127338237651
+        },
+        {
+            "source": "G8",
+            "destination": "G10",
+            "weight": 0.03328485018789728
+        },
+        {
+            "source": "G1",
+            "destination": "G6",
+            "weight": 0.03269423184594035
+        },
+        {
+            "source": "G2",
+            "destination": "G8",
+            "weight": 0.028961109200752795
+        },
+        {
+            "source": "G9",
+            "destination": "G10",
+            "weight": 0.028489896536961545
+        },
+        {
+            "source": "G2",
+            "destination": "G3",
+            "weight": 0.02800657095173932
+        },
+        {
+            "source": "G3",
+            "destination": "G6",
+            "weight": 0.026313624147089654
+        },
+        {
+            "source": "G2",
+            "destination": "G9",
+            "weight": 0.02574852960575146
+        },
+        {
+            "source": "G4",
+            "destination": "G10",
+            "weight": 0.024977179541751063
+        },
+        {
+            "source": "G3",
+            "destination": "G4",
+            "weight": 0.021680168569808877
+        },
+        {
+            "source": "G4",
+            "destination": "G9",
+            "weight": 0.020348476376883636
+        },
+        {
+            "source": "G5",
+            "destination": "G10",
+            "weight": 0.01668859376131943
+        },
+        {
+            "source": "G4",
+            "destination": "G8",
+            "weight": 0.016272537487564635
+        },
+        {
+            "source": "G1",
+            "destination": "G9",
+            "weight": 0.015688808074065495
+        },
+        {
+            "source": "G5",
+            "destination": "G9",
+            "weight": 0.014917741680880555
+        }
+    ]
+}
