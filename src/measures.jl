@@ -72,6 +72,22 @@ function assortativity(graph::SimpleGraph, genes_to_groups, groups_to_indices, i
 
 end
 
+# degree assortativity from InferredNetwork (at threshold)
+function assortativity(network::InferredNetwork)
+end
+function assortativity(network::InferredNetwork, threshold::Int)
+end
+function assortativity(network::InferredNetwork, thresholds::AbstractRange)
+end
+
+# label assortativity from InferredNetwork (at threshold)
+function assortativity(network::InferredNetwork, nodes_to_groups)
+end
+function assortativity(network::InferredNetwork, threshold::Int, nodes_to_groups)
+end
+function assortativity(network::InferredNetwork, thresholds::AbstractRange, nodes_to_groups)
+end
+
 function excess_degree_assortativity(graph::SimpleGraph)
 
     # make a matrix containing the strength of connection between each group
@@ -84,6 +100,7 @@ function excess_degree_assortativity(graph::SimpleGraph)
         degree1 = degree(graph,edge.src) - 1
         degree2 = degree(graph,edge.dst) - 1
 
+		# check that excess degree isn't null
 		if degree1 != 0 && degree2 != 0
 
 	        # increment connectivity between the two degrees
@@ -94,7 +111,7 @@ function excess_degree_assortativity(graph::SimpleGraph)
     end
 
 	# omitted edges
-	@warn "$(Int(ne(graph) - sum(e_matrix)/2)) edges were omitted (at least one node with excess degree of 0)"
+	(omitted_edges = Int(ne(graph) - sum(e_matrix)/2)) == 0 ? nothing : @warn "$(omitted_edges) edges were omitted out of $(ne(graph)) considered (at least one node with excess degree of 0)"
 
 	calculate_assortativity(e_matrix)
 
@@ -166,3 +183,83 @@ function second_neighbour_assortativity(graph::SimpleGraph, genes_to_groups, gro
 	calculate_assortativity(e_matrix)
 
 end
+
+function excess_degree_second_neighbour_assortativity(graph::SimpleGraph)
+
+	# make a matrix containing the strength of connection between each group
+	e_matrix = zeros(Δ(graph) - 1, Δ(graph) - 1)
+
+	# keep track of omitted edges
+	omitted_edges = 0
+
+	# count edges
+	total_edges = 0
+
+	# iterate over nodes
+	for node in vertices(graph)
+
+		# retrieve the degree of that node
+		degree1 = degree(graph,node) - 1
+
+		# iterate over the neighbours of that first node
+		for one_walk in outneighbors(graph,node)
+
+			# iterate over the neighbours of that second node (excluding the starting node)
+			for two_walk in filter(x -> x ≠ node, outneighbors(graph,one_walk))
+
+				# retrieve the degree of the second neighbour
+				degree2 = degree(graph,two_walk) - 1
+
+				# check that excess degree isn't null
+				if degree1 != 0 && degree2 != 0
+
+					# increment connectivity between the two degrees
+					e_matrix[degree1, degree2] += 1
+					e_matrix[degree2, degree1] += 1
+
+				else
+					omitted_edges += 1
+				end
+				total_edges += 1
+			end
+		end
+	end
+
+	# omitted edges
+	(omitted_edges)  == 0 ? nothing : @warn "$(omitted_edges) edges were omitted out of $(total_edges) considered (at least one node with excess degree of 0)"
+
+	calculate_assortativity(e_matrix)
+
+end
+
+# second neighbour degree assortativity from InferredNetwork (at threshold)
+function second_neighbour_assortativity(network::InferredNetwork)
+end
+function second_neighbour_assortativity(network::InferredNetwork, threshold::Int)
+end
+function second_neighbour_assortativity(network::InferredNetwork, thresholds::AbstractRange)
+end
+
+# second neighbour label assortativity from InferredNetwork (at threshold)
+function second_neighbour_assortativity(network::InferredNetwork, nodes_to_groups)
+end
+function second_neighbour_assortativity(network::InferredNetwork, threshold::Int, nodes_to_groups)
+end
+function second_neighbour_assortativity(network::InferredNetwork, thresholds::AbstractRange, nodes_to_groups)
+end
+
+# retrieve community number and communities using the label propagation algorithm
+function get_communities(graph::SimpleGraph)
+	communities, convergence = label_propagation(graph)
+	communities_number = 0
+	for i in 1:maximum(communities)
+		if length(findall(x -> x == i, communities)) >= 1
+			communities_number += 1
+		end
+	end
+	communities_number, communities
+end
+
+# LightGraphs syntax helpers
+get_communities_number(graph::SimpleGraph) = get_communities(graph)[1]
+get_modularity(graph::SimpleGraph) = modularity(graph, get_communities(graph)[2])

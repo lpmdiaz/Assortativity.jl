@@ -11,6 +11,9 @@ export
 	assortativity,
 	second_neighbour_assortativity,
 	excess_degree_assortativity,
+	excess_degree_second_neighbour_assortativity,
+	get_communities_number,
+	get_modularity,
 	# noise
 	random_edge_rewiring,
 	random_network,

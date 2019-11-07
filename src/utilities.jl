@@ -107,9 +107,9 @@ function set_threshold(network::InferredNetwork, threshold::Int)
     threshold > length(network.edges) ? error("edge treshold is greater than edge number (in this case: max. $(length(network.edges)))") : nothing
 
     new_network_edges = network.edges[1:threshold]
-    genes = unique(vcat([edge.nodes[1] for edge in new_network_edges], [edge.nodes[2] for edge in new_network_edges]))
+    nodes = unique(vcat([edge.nodes[1] for edge in new_network_edges], [edge.nodes[2] for edge in new_network_edges]))
 
-    InferredNetwork(genes, new_network_edges)
+    InferredNetwork(nodes, new_network_edges)
 
 end
 
@@ -134,7 +134,7 @@ function InferredNetwork_to_JSON(network::InferredNetwork, genes_to_groups, grou
 end
 
 # export JSON network. use formatted to have tabs
-function write_json_network(json_net::Dict, out_path::String; formatted=true)
+function write_json_network(json_net::Dict, out_path::String; formatted = true)
     formatted ? data = json_net : data = JSON.json(json_net)
     open(out_path,"w") do f
         JSON.print(f, data, 4)
