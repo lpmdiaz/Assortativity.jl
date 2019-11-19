@@ -4,9 +4,10 @@
 
 ## Description
 
+Implementation of the assortativity coefficient for inferred networks. Assortativity is explained in [[1]](#references).
 Based on code / work by [Thalia Chan](https://github.com/Tchanders). Supports paper. Based on edge threshold approach. Gaining confidence in inferred networks. Also includes additional stuff not discussed in paper (e.g. second neighbour measures). Relies primarily on [LightGraphs.jl](https://github.com/JuliaGraphs/LightGraphs.jl) and [NetworkInference.jl](https://github.com/Tchanders/NetworkInference.jl).
 
-(use [fork](https://github.com/lpmdiaz/NetworkInference.jl) of NetworkInference.jl for correlation (for now))
+If using correlation for inferring networks, use [this fork](https://github.com/lpmdiaz/NetworkInference.jl) of NetworkInference.jl (i.e. `using Pkg; Pkg.clone("https://github.com/lpmdiaz/NetworkInference.jl.git")`).
 
 ### Requirements
 
@@ -14,19 +15,23 @@ Requires data + file describing gene annotations (or annotations for any type of
 
 ## Installation
 
-`]
-clone
-`
+`using Pkg; Pkg.clone("https://github.com/lpmdiaz/Assortativity.jl.git")`
 
 ## Usage
 
+First include the package: `using Assortativity`.
+
 ### Infer network
+
+Inference algorithms: MI, CLR, PUC, PIDC and two types of correlation coefficients (Pearson and Spearman) both signed and unsigned -- see usage [details](https://github.com/lpmdiaz/NetworkInference.jl#inference-algorithms-currently-implemented) and [reference](https://github.com/lpmdiaz/NetworkInference.jl#references) publication for the first four algorithms.
 
 inference algorithms + export net (symmetric)
 `nodes_number = length(network.nodes) # number of nodes in the full InferredNetwork`
 `edges_number = length(network.edges) # number of edges in the full InferredNetwork`
 
 ### Import inferred network
+
+...
 
 ### Conversions
 
@@ -48,8 +53,12 @@ Second neighbour: does not consider walk back to the starting node. Different be
 
 ### Graph manipulation utilities
 
-Later / WIP.
+Future addition.
 
 ### Plotting utilities
 
-Later / WIP.
+Future addition.
+
+## References
+
+[1] Newman, M. E. J. (2003). Mixing patterns in networks. _Physical Review E_, 67(2), 13. ([doi])(https://doi.org/10.1103/PhysRevE.67.026126)

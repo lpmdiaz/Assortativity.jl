@@ -1,16 +1,5 @@
 using LinearAlgebra
 
-# """
-# 	assortativity(network::InferredNetwork, threshold<:Real, groups_filename::String)
-#
-# description.
-#
-# arguments:
-# - 'network': network.
-# - 'threshold': the proportion of network edges to include in the analysis.
-# - 'annotations_filename': path to annotations file.
-# """
-
 function calculate_assortativity(connectivity_matrix)
 
 	# normalise matrix
