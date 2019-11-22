@@ -1,3 +1,10 @@
+# store assortativity information
+struct AssortativityObject
+   value::Float64
+   connectivity::Matrix{Int}
+   groups::Union{Dict, Nothing}
+end
+
 # holds relevant node information for JSON export
 struct JSON_node
    label::String

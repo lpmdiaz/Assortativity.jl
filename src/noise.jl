@@ -1,4 +1,4 @@
-using Combinatorics
+using Combinatorics: combinations
 
 # introduce noise in networks for a specified number of edges
 function random_edge_rewiring(network::InferredNetwork, number_of_random::Int)
@@ -51,15 +51,15 @@ function random_edge_rewiring(network::InferredNetwork, number_of_random::Int)
 	# make dictionaries to keep track of the IDs assigned to nodes
 	labels_to_ids = Dict{String,Int}()
 	for (i, node) in enumerate(network.nodes)
-		labels_to_ids[uppercase(node.label)] = i
+		labels_to_ids[node.label] = i
 	end
 	ids_to_labels = Dict(value => key for (key,value) in labels_to_ids) # reverse dictionary
 
 	# make an adjacency matrix
 	adjacency_matrix = zeros(Int, (length(network.nodes), length(network.nodes)))
 	for edge in network.edges
-		label1id = labels_to_ids[uppercase(edge.nodes[1].label)]
-		label2id = labels_to_ids[uppercase(edge.nodes[2].label)]
+		label1id = labels_to_ids[edge.nodes[1].label]
+		label2id = labels_to_ids[edge.nodes[2].label]
 		adjacency_matrix[label1id, label2id] += 1
 		adjacency_matrix[label2id, label1id] += 1
 	end

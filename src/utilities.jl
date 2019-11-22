@@ -1,5 +1,5 @@
-using CSV
-using DelimitedFiles
+using CSV: read
+using DelimitedFiles: readdlm
 using JSON
 
 # make an InferredNetwork from a network text file
@@ -10,94 +10,66 @@ function load_network(filename::String; ignoreotherline = true)
 
     # read data
     network = readdlm(filename)
-    gene_names = uppercase.(string.(unique(network[:, 1:2])))
-    genes_dict = Dict{String,Node}()
-    for gene_name in gene_names
-        genes_dict[gene_name] = Node(gene_name, Float64[], 0, Float64[])
+    labels = string.(unique(network[:, 1:2]))
+    nodes_dict = Dict{String,Node}()
+    for label in labels
+        nodes_dict[label] = Node(label, Float64[], 0, Float64[])
     end
-
-    # collect genes
-    genes = collect(values(genes_dict))
 
     # construct a NetworkInference.Edge
     function make_edge(net, pos)
     	NetworkInference.Edge(
-    		[genes_dict[ uppercase(string(net[pos,:][1])) ],
-    		 genes_dict[ uppercase(string(net[pos,:][2])) ]],
+    		[nodes_dict[ string(net[pos,:][1]) ],
+    		 nodes_dict[ string(net[pos,:][2]) ]],
     		net[pos, :][3])
     end
 
-    # collect edges
+    # collect nodes and edges
+	nodes = collect(values(nodes_dict))
     edges = [make_edge(network, i) for i in 1 : factor : size(network)[1]]
 
-    InferredNetwork(genes, edges)
+    InferredNetwork(nodes, edges)
 
 end
 
-# get a dictionary of gene names to group labels
-function get_genes_to_groups(genes::Array{Node}, groups_filename::String)
+# get a dictionary of nodes labels names to group labels
+function get_labels_to_groups(nodes::Array{Node}, groups_filename::String)
 
-    # read in genes as sorted by group
-    groups = CSV.read(groups_filename, delim='\t')
+    # read in node labels as sorted by group
+    groups = read(groups_filename, delim='\t')
 
     # declare dictionary
-    genes_to_groups = Dict{String,Symbol}()
+    labels_to_groups = Dict{String,Symbol}()
 
-    # fill in dictionary with genes in each gene group
-    for group_label in names(groups)
-        gene_names = collect(skipmissing(groups[:,group_label])) # ignore missing values
-        for gene_name in gene_names
-            genes_to_groups[uppercase(gene_name)] = group_label
+    # fill in dictionary with labels in each group
+    for group in names(groups)
+        labels = collect(skipmissing(groups[:,group])) # ignore missing values
+        for label in labels
+            labels_to_groups[label] = group
         end
     end
 
-    # assign any genes not in the groups file to the :Other group
-    for gene in genes
-        if !(uppercase(gene.label) in keys(genes_to_groups))
-            genes_to_groups[uppercase(gene.label)] = :Other
+    # assign any labels not in the groups file to the :Other group
+    for node in nodes
+        if !(node.label in keys(labels_to_groups))
+            labels_to_groups[node.label] = :Other
         end
     end
 
-    genes_to_groups
+    labels_to_groups
 
 end
 
-# build a dictionary of group labels (= gene symbols or attribute) to indices
+# build a dictionary of group labels to indices
 function get_groups_to_indices(groups)
 
     # declare dictionary
     groups_to_indices = Dict{Symbol,Int}()
 
     # assign an index to each group
-    for (i, group) in enumerate(groups)
-        groups_to_indices[group] = i
-    end
+	[groups_to_indices[group] = i for (i, group) in enumerate(sort(unique(values(groups))))]
 
     groups_to_indices
-
-end
-
-# make a LightGraph from an InferredNetwork
-function InferredNetwork_to_LightGraph(network::InferredNetwork)
-
-    # make dictionaries to keep track of the IDs assigned to nodes
-    labels_to_ids = Dict{String,Int}()
-    for (i, node) in enumerate(network.nodes)
-        labels_to_ids[uppercase(node.label)] = i
-    end
-    ids_to_labels = Dict(value => key for (key,value) in labels_to_ids) # reverse dictionary
-
-    # make an adjacency matrix
-    adjacency_matrix = zeros(Int, (length(network.nodes), length(network.nodes)))
-    for edge in network.edges
-        node1_id = labels_to_ids[uppercase(edge.nodes[1].label)]
-        node2_id = labels_to_ids[uppercase(edge.nodes[2].label)]
-        adjacency_matrix[node1_id, node2_id] += 1
-        adjacency_matrix[node2_id, node1_id] += 1
-    end
-
-    # return a SimpleGraph made from the adjacency matrix, and the ids dictionary
-    LightGraphs.SimpleGraphs.SimpleGraph(adjacency_matrix), ids_to_labels
 
 end
 
@@ -113,12 +85,36 @@ function set_threshold(network::InferredNetwork, threshold::Int)
 
 end
 
+# make a LightGraph from an InferredNetwork
+function InferredNetwork_to_LightGraph(network::InferredNetwork)
+
+    # make dictionaries to keep track of the IDs assigned to nodes
+    labels_to_ids = Dict{String,Int}()
+    for (i, node) in enumerate(network.nodes)
+        labels_to_ids[node.label] = i
+    end
+    ids_to_labels = Dict(value => key for (key, value) in labels_to_ids) # reverse dictionary
+
+    # make an adjacency matrix
+    adjacency_matrix = zeros(Int, (length(network.nodes), length(network.nodes)))
+    for edge in network.edges
+        node1_id = labels_to_ids[edge.nodes[1].label]
+        node2_id = labels_to_ids[edge.nodes[2].label]
+        adjacency_matrix[node1_id, node2_id] += 1
+        adjacency_matrix[node2_id, node1_id] += 1
+    end
+
+    # return a SimpleGraph made from the adjacency matrix, and the ids dictionary
+    LightGraphs.SimpleGraphs.SimpleGraph(adjacency_matrix), ids_to_labels
+
+end
+
 # convert InferredNetwork to a JSON object that can then be exported
-function InferredNetwork_to_JSON(network::InferredNetwork, genes_to_groups, groups_to_indices)
+function InferredNetwork_to_JSON(network::InferredNetwork, labels_to_groups, groups_to_indices)
 
    # collect relevant data
    nodes_labels = [node.label for node in network.nodes]
-   nodes_groups = [genes_to_groups[node_label] for node_label in nodes_labels]
+   nodes_groups = [labels_to_groups[node_label] for node_label in nodes_labels]
    nodes_groups_indices = [groups_to_indices[node_group] for node_group in nodes_groups]
    edges_sources = [node.label for node in [edge.nodes[1] for edge in network.edges]]
    edges_destinations = [node.label for node in [edge.nodes[2] for edge in network.edges]]
@@ -134,9 +130,22 @@ function InferredNetwork_to_JSON(network::InferredNetwork, genes_to_groups, grou
 end
 
 # export JSON network. use formatted to have tabs
-function write_json_network(json_net::Dict, out_path::String; formatted = true)
-    formatted ? data = json_net : data = JSON.json(json_net)
+function write_JSON_network(JSON_net::Dict, out_path::String; formatted = true)
+    formatted ? data = JSON_net : data = JSON.json(JSON_net)
     open(out_path,"w") do f
         JSON.print(f, data, 4)
     end
+end
+
+# filter connectivity of an AssortativityObject to remove empty columns and rows
+function filter_connectivity(obj::AssortativityObject)
+	if typeof(obj.groups) <: Dict # ignore degree assortativity
+		sorted_groups = sort(obj.groups)
+		indices = collect(values(sorted_groups))
+		new_connectivity = obj.connectivity[indices,indices]
+		new_groups = Dict(keys(sorted_groups) .=> 1:length(indices))
+		AssortativityObject(obj.value, new_connectivity, new_groups)
+	else
+		obj
+	end
 end
