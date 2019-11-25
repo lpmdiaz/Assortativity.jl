@@ -1,0 +1,1091 @@
+{
+    "nodes": [
+        {
+            "label": "CLDN6",
+            "group": "Primed_Pluripotency",
+            "group_index": 9
+        },
+        {
+            "label": "FGF5",
+            "group": "Primed_Pluripotency",
+            "group_index": 9
+        },
+        {
+            "label": "CDH2",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "KLF4",
+            "group": "Naive_Pluripotency",
+            "group_index": 7
+        },
+        {
+            "label": "SOCS3",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "GLI2",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "FGF4",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "MYST3",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "POU5F1",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "GDF3",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "DNMT3B",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "JAG1",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "ACTB",
+            "group": "Loading_Control",
+            "group_index": 5
+        },
+        {
+            "label": "ESRRB",
+            "group": "Naive_Pluripotency",
+            "group_index": 7
+        },
+        {
+            "label": "DPPA4",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "GAPDH",
+            "group": "Loading_Control",
+            "group_index": 5
+        },
+        {
+            "label": "FBXO15",
+            "group": "Naive_Pluripotency",
+            "group_index": 7
+        },
+        {
+            "label": "MBD3",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "FOXA2",
+            "group": "Endoderm",
+            "group_index": 4
+        },
+        {
+            "label": "LIFR",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "DNMT1",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "NR5A2",
+            "group": "Naive_Pluripotency",
+            "group_index": 7
+        },
+        {
+            "label": "CD34",
+            "group": "Primed_Pluripotency",
+            "group_index": 9
+        },
+        {
+            "label": "NES",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "NR0B1",
+            "group": "Naive_Pluripotency",
+            "group_index": 7
+        },
+        {
+            "label": "BMP7",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "MKI67IP",
+            "group": "Cell_Cycle",
+            "group_index": 1
+        },
+        {
+            "label": "BMP4",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "TRP53",
+            "group": "Cell_Cycle",
+            "group_index": 1
+        },
+        {
+            "label": "CTCF",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "BMI1",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "REST",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "OTX2",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "CTNNB1",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "BMPR1A",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "GSK3B",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "EOMES",
+            "group": "Trophoectoderm",
+            "group_index": 12
+        },
+        {
+            "label": "TCF3",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "CDK2",
+            "group": "Cell_Cycle",
+            "group_index": 1
+        },
+        {
+            "label": "RAI1",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "HES1",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "SETDB1",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "RCC1",
+            "group": "Cell_Cycle",
+            "group_index": 1
+        },
+        {
+            "label": "NANOG",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "PRMT7",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "SOX2",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "EZH2",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "LIF",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "PAX6",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "STAT3",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "LIN28",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "MYC",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "FGFR2",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "IGF2",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "TBX3",
+            "group": "Naive_Pluripotency",
+            "group_index": 7
+        },
+        {
+            "label": "VIM",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "SMAD1",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "UTF1",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "PTPN11",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "SMARCC1",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "TUBB3",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        },
+        {
+            "label": "WDR5",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "ZFP281",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "SALL4",
+            "group": "Core_Pluripotency",
+            "group_index": 3
+        },
+        {
+            "label": "GRB2",
+            "group": "Signalling",
+            "group_index": 11
+        },
+        {
+            "label": "PRMT6",
+            "group": "Chromatin_Modulator",
+            "group_index": 2
+        },
+        {
+            "label": "NR6A1",
+            "group": "Neuroectoderm",
+            "group_index": 8
+        }
+    ],
+    "edges": [
+        {
+            "source": "CLDN6",
+            "destination": "IGF2",
+            "weight": 1.9925889956272855
+        },
+        {
+            "source": "FGF5",
+            "destination": "OTX2",
+            "weight": 1.989668723976607
+        },
+        {
+            "source": "CDH2",
+            "destination": "PAX6",
+            "weight": 1.9837035720563774
+        },
+        {
+            "source": "KLF4",
+            "destination": "TBX3",
+            "weight": 1.9836580750418733
+        },
+        {
+            "source": "SOCS3",
+            "destination": "STAT3",
+            "weight": 1.9809540794686797
+        },
+        {
+            "source": "CDH2",
+            "destination": "VIM",
+            "weight": 1.9761775546914664
+        },
+        {
+            "source": "GLI2",
+            "destination": "HES1",
+            "weight": 1.9758755978207505
+        },
+        {
+            "source": "FGF4",
+            "destination": "POU5F1",
+            "weight": 1.9735976922025904
+        },
+        {
+            "source": "MYST3",
+            "destination": "SMAD1",
+            "weight": 1.9712803891661783
+        },
+        {
+            "source": "POU5F1",
+            "destination": "UTF1",
+            "weight": 1.9690947106478411
+        },
+        {
+            "source": "GDF3",
+            "destination": "POU5F1",
+            "weight": 1.967074953177288
+        },
+        {
+            "source": "FGF4",
+            "destination": "GDF3",
+            "weight": 1.9663148020802828
+        },
+        {
+            "source": "GLI2",
+            "destination": "GSK3B",
+            "weight": 1.96420359181477
+        },
+        {
+            "source": "SOCS3",
+            "destination": "TBX3",
+            "weight": 1.96351402679682
+        },
+        {
+            "source": "DNMT3B",
+            "destination": "OTX2",
+            "weight": 1.961012711467942
+        },
+        {
+            "source": "JAG1",
+            "destination": "PAX6",
+            "weight": 1.960466562292932
+        },
+        {
+            "source": "KLF4",
+            "destination": "STAT3",
+            "weight": 1.960323148892778
+        },
+        {
+            "source": "ACTB",
+            "destination": "PTPN11",
+            "weight": 1.9573135153260646
+        },
+        {
+            "source": "ESRRB",
+            "destination": "NR0B1",
+            "weight": 1.9571413778307378
+        },
+        {
+            "source": "DNMT3B",
+            "destination": "FGF5",
+            "weight": 1.9552651567299384
+        },
+        {
+            "source": "DPPA4",
+            "destination": "GDF3",
+            "weight": 1.955070068341102
+        },
+        {
+            "source": "GAPDH",
+            "destination": "LIN28",
+            "weight": 1.954868783260557
+        },
+        {
+            "source": "KLF4",
+            "destination": "SOCS3",
+            "weight": 1.9529110187506653
+        },
+        {
+            "source": "FBXO15",
+            "destination": "KLF4",
+            "weight": 1.9487503516866553
+        },
+        {
+            "source": "MBD3",
+            "destination": "SMARCC1",
+            "weight": 1.9486293668140728
+        },
+        {
+            "source": "FOXA2",
+            "destination": "IGF2",
+            "weight": 1.9485421135286551
+        },
+        {
+            "source": "ESRRB",
+            "destination": "NR5A2",
+            "weight": 1.9468401991660076
+        },
+        {
+            "source": "DPPA4",
+            "destination": "FGF4",
+            "weight": 1.9453191728715846
+        },
+        {
+            "source": "CLDN6",
+            "destination": "LIF",
+            "weight": 1.944683763267507
+        },
+        {
+            "source": "LIFR",
+            "destination": "STAT3",
+            "weight": 1.9413613336710676
+        },
+        {
+            "source": "DNMT1",
+            "destination": "SMARCC1",
+            "weight": 1.9407727762149807
+        },
+        {
+            "source": "NR5A2",
+            "destination": "TBX3",
+            "weight": 1.9406026247117172
+        },
+        {
+            "source": "CD34",
+            "destination": "FGF5",
+            "weight": 1.9390578544427362
+        },
+        {
+            "source": "ESRRB",
+            "destination": "TBX3",
+            "weight": 1.9365576953191792
+        },
+        {
+            "source": "DPPA4",
+            "destination": "UTF1",
+            "weight": 1.934971191701756
+        },
+        {
+            "source": "FGF4",
+            "destination": "UTF1",
+            "weight": 1.9348160931227087
+        },
+        {
+            "source": "ESRRB",
+            "destination": "FBXO15",
+            "weight": 1.9325111566096593
+        },
+        {
+            "source": "NES",
+            "destination": "PAX6",
+            "weight": 1.9317680238837216
+        },
+        {
+            "source": "FOXA2",
+            "destination": "LIFR",
+            "weight": 1.9313303776304038
+        },
+        {
+            "source": "NR0B1",
+            "destination": "NR5A2",
+            "weight": 1.9305980264394906
+        },
+        {
+            "source": "BMP7",
+            "destination": "IGF2",
+            "weight": 1.9302007848273934
+        },
+        {
+            "source": "FBXO15",
+            "destination": "TBX3",
+            "weight": 1.9296999495898972
+        },
+        {
+            "source": "MKI67IP",
+            "destination": "MYC",
+            "weight": 1.9290491807770984
+        },
+        {
+            "source": "DPPA4",
+            "destination": "POU5F1",
+            "weight": 1.9281502440042555
+        },
+        {
+            "source": "CD34",
+            "destination": "CLDN6",
+            "weight": 1.9277565025364414
+        },
+        {
+            "source": "BMP4",
+            "destination": "NR5A2",
+            "weight": 1.9274800590152217
+        },
+        {
+            "source": "FGF4",
+            "destination": "NR0B1",
+            "weight": 1.9241660645251177
+        },
+        {
+            "source": "GDF3",
+            "destination": "UTF1",
+            "weight": 1.9236146381968935
+        },
+        {
+            "source": "TRP53",
+            "destination": "UTF1",
+            "weight": 1.9226938046892421
+        },
+        {
+            "source": "CTCF",
+            "destination": "MBD3",
+            "weight": 1.9223126715907661
+        },
+        {
+            "source": "FGF5",
+            "destination": "UTF1",
+            "weight": 1.9214952411029569
+        },
+        {
+            "source": "BMI1",
+            "destination": "NES",
+            "weight": 1.9184007837185122
+        },
+        {
+            "source": "GAPDH",
+            "destination": "TCF3",
+            "weight": 1.918378178952109
+        },
+        {
+            "source": "GLI2",
+            "destination": "SOX2",
+            "weight": 1.917077448820462
+        },
+        {
+            "source": "DNMT3B",
+            "destination": "UTF1",
+            "weight": 1.9161988563147716
+        },
+        {
+            "source": "FBXO15",
+            "destination": "NR0B1",
+            "weight": 1.9161691972091104
+        },
+        {
+            "source": "CDH2",
+            "destination": "NES",
+            "weight": 1.915820005168497
+        },
+        {
+            "source": "REST",
+            "destination": "TCF3",
+            "weight": 1.9152428819375187
+        },
+        {
+            "source": "REST",
+            "destination": "TUBB3",
+            "weight": 1.915106639774272
+        },
+        {
+            "source": "OTX2",
+            "destination": "UTF1",
+            "weight": 1.913284239299711
+        },
+        {
+            "source": "CTNNB1",
+            "destination": "SMARCC1",
+            "weight": 1.9127603727959088
+        },
+        {
+            "source": "CTNNB1",
+            "destination": "MBD3",
+            "weight": 1.9124983934460191
+        },
+        {
+            "source": "ESRRB",
+            "destination": "KLF4",
+            "weight": 1.9119883937367996
+        },
+        {
+            "source": "KLF4",
+            "destination": "NR0B1",
+            "weight": 1.908750763465145
+        },
+        {
+            "source": "CTCF",
+            "destination": "SMARCC1",
+            "weight": 1.9087370525260077
+        },
+        {
+            "source": "CDH2",
+            "destination": "JAG1",
+            "weight": 1.9069544090089772
+        },
+        {
+            "source": "BMPR1A",
+            "destination": "RAI1",
+            "weight": 1.9065475262688294
+        },
+        {
+            "source": "POU5F1",
+            "destination": "TRP53",
+            "weight": 1.905919883755713
+        },
+        {
+            "source": "NR5A2",
+            "destination": "SOX2",
+            "weight": 1.9054802170945913
+        },
+        {
+            "source": "GSK3B",
+            "destination": "LIF",
+            "weight": 1.9051477830249706
+        },
+        {
+            "source": "REST",
+            "destination": "WDR5",
+            "weight": 1.904426554286636
+        },
+        {
+            "source": "GDF3",
+            "destination": "MYC",
+            "weight": 1.903850131583889
+        },
+        {
+            "source": "CLDN6",
+            "destination": "FGF5",
+            "weight": 1.903822036149955
+        },
+        {
+            "source": "LIFR",
+            "destination": "SOX2",
+            "weight": 1.9026880345024968
+        },
+        {
+            "source": "REST",
+            "destination": "ZFP281",
+            "weight": 1.9026673766729338
+        },
+        {
+            "source": "BMP4",
+            "destination": "REST",
+            "weight": 1.9008555538927832
+        },
+        {
+            "source": "REST",
+            "destination": "SALL4",
+            "weight": 1.8999529821272845
+        },
+        {
+            "source": "EOMES",
+            "destination": "FGF4",
+            "weight": 1.8987645330833525
+        },
+        {
+            "source": "FBXO15",
+            "destination": "FGF4",
+            "weight": 1.8977846254046022
+        },
+        {
+            "source": "NR0B1",
+            "destination": "TBX3",
+            "weight": 1.8964325517512548
+        },
+        {
+            "source": "FBXO15",
+            "destination": "POU5F1",
+            "weight": 1.896229659438744
+        },
+        {
+            "source": "BMI1",
+            "destination": "PAX6",
+            "weight": 1.8960582452943493
+        },
+        {
+            "source": "CTNNB1",
+            "destination": "MYST3",
+            "weight": 1.8934216970785949
+        },
+        {
+            "source": "CTNNB1",
+            "destination": "DNMT1",
+            "weight": 1.8933796191367012
+        },
+        {
+            "source": "DNMT3B",
+            "destination": "SALL4",
+            "weight": 1.8927087656224197
+        },
+        {
+            "source": "TCF3",
+            "destination": "TUBB3",
+            "weight": 1.8915225668767897
+        },
+        {
+            "source": "KLF4",
+            "destination": "NES",
+            "weight": 1.8904610589314617
+        },
+        {
+            "source": "DNMT1",
+            "destination": "GAPDH",
+            "weight": 1.889891708522223
+        },
+        {
+            "source": "CTCF",
+            "destination": "DNMT1",
+            "weight": 1.8897832191347301
+        },
+        {
+            "source": "ACTB",
+            "destination": "CTNNB1",
+            "weight": 1.889762729891867
+        },
+        {
+            "source": "CDK2",
+            "destination": "DNMT1",
+            "weight": 1.8891764809110776
+        },
+        {
+            "source": "RAI1",
+            "destination": "SMAD1",
+            "weight": 1.8879144583516507
+        },
+        {
+            "source": "DNMT1",
+            "destination": "SETDB1",
+            "weight": 1.88650098171968
+        },
+        {
+            "source": "ESRRB",
+            "destination": "FGF4",
+            "weight": 1.8861888230471076
+        },
+        {
+            "source": "DNMT3B",
+            "destination": "LIN28",
+            "weight": 1.8861288551338689
+        },
+        {
+            "source": "BMP4",
+            "destination": "TBX3",
+            "weight": 1.885833008526444
+        },
+        {
+            "source": "DPPA4",
+            "destination": "TUBB3",
+            "weight": 1.8838858464162138
+        },
+        {
+            "source": "FBXO15",
+            "destination": "GDF3",
+            "weight": 1.8830580815026448
+        },
+        {
+            "source": "DNMT1",
+            "destination": "MBD3",
+            "weight": 1.8822103209337993
+        },
+        {
+            "source": "FBXO15",
+            "destination": "NR5A2",
+            "weight": 1.882142291033217
+        },
+        {
+            "source": "GAPDH",
+            "destination": "PRMT7",
+            "weight": 1.8814508593925328
+        },
+        {
+            "source": "CLDN6",
+            "destination": "FOXA2",
+            "weight": 1.880645468462581
+        },
+        {
+            "source": "ESRRB",
+            "destination": "SOX2",
+            "weight": 1.8800987056607998
+        },
+        {
+            "source": "HES1",
+            "destination": "NES",
+            "weight": 1.8783713213609974
+        },
+        {
+            "source": "CTCF",
+            "destination": "SETDB1",
+            "weight": 1.8779442520974525
+        },
+        {
+            "source": "KLF4",
+            "destination": "NR5A2",
+            "weight": 1.8767378291021757
+        },
+        {
+            "source": "BMP4",
+            "destination": "SOCS3",
+            "weight": 1.8759910574830436
+        },
+        {
+            "source": "FBXO15",
+            "destination": "LIFR",
+            "weight": 1.8756428572168407
+        },
+        {
+            "source": "ACTB",
+            "destination": "GRB2",
+            "weight": 1.8744032529003103
+        },
+        {
+            "source": "JAG1",
+            "destination": "PRMT6",
+            "weight": 1.873072809812459
+        },
+        {
+            "source": "FBXO15",
+            "destination": "STAT3",
+            "weight": 1.8729880645433892
+        },
+        {
+            "source": "SETDB1",
+            "destination": "WDR5",
+            "weight": 1.8728412247326478
+        },
+        {
+            "source": "DNMT3B",
+            "destination": "POU5F1",
+            "weight": 1.8725041882171847
+        },
+        {
+            "source": "GDF3",
+            "destination": "NR0B1",
+            "weight": 1.8720296191239343
+        },
+        {
+            "source": "GAPDH",
+            "destination": "SMARCC1",
+            "weight": 1.8709574968690488
+        },
+        {
+            "source": "RCC1",
+            "destination": "SETDB1",
+            "weight": 1.8699344399057471
+        },
+        {
+            "source": "NANOG",
+            "destination": "TUBB3",
+            "weight": 1.8688231327849014
+        },
+        {
+            "source": "CTCF",
+            "destination": "ZFP281",
+            "weight": 1.8674385885160825
+        },
+        {
+            "source": "DPPA4",
+            "destination": "OTX2",
+            "weight": 1.8669843827018826
+        },
+        {
+            "source": "HES1",
+            "destination": "NR6A1",
+            "weight": 1.8668086208059038
+        },
+        {
+            "source": "PRMT7",
+            "destination": "RCC1",
+            "weight": 1.8649960497160598
+        },
+        {
+            "source": "SOX2",
+            "destination": "TRP53",
+            "weight": 1.8637942049739746
+        },
+        {
+            "source": "CDK2",
+            "destination": "GAPDH",
+            "weight": 1.8613924548123628
+        },
+        {
+            "source": "DPPA4",
+            "destination": "RAI1",
+            "weight": 1.859508539488559
+        },
+        {
+            "source": "ESRRB",
+            "destination": "LIFR",
+            "weight": 1.8594364286335376
+        },
+        {
+            "source": "EZH2",
+            "destination": "RCC1",
+            "weight": 1.8585710988372661
+        },
+        {
+            "source": "ESRRB",
+            "destination": "GDF3",
+            "weight": 1.8584286730675719
+        },
+        {
+            "source": "NANOG",
+            "destination": "SOCS3",
+            "weight": 1.857917004363764
+        },
+        {
+            "source": "GAPDH",
+            "destination": "MBD3",
+            "weight": 1.8576567808153168
+        },
+        {
+            "source": "CDK2",
+            "destination": "TUBB3",
+            "weight": 1.8574630050166028
+        },
+        {
+            "source": "LIF",
+            "destination": "STAT3",
+            "weight": 1.8557490505629783
+        },
+        {
+            "source": "MBD3",
+            "destination": "ZFP281",
+            "weight": 1.855265599480967
+        },
+        {
+            "source": "DNMT3B",
+            "destination": "DPPA4",
+            "weight": 1.8549621632592563
+        },
+        {
+            "source": "FGF4",
+            "destination": "NANOG",
+            "weight": 1.8548489328537772
+        },
+        {
+            "source": "FGF4",
+            "destination": "NR5A2",
+            "weight": 1.8547729992228175
+        },
+        {
+            "source": "PAX6",
+            "destination": "VIM",
+            "weight": 1.853069226244715
+        },
+        {
+            "source": "STAT3",
+            "destination": "TBX3",
+            "weight": 1.8529956493528073
+        },
+        {
+            "source": "EOMES",
+            "destination": "POU5F1",
+            "weight": 1.8521048790206627
+        },
+        {
+            "source": "CLDN6",
+            "destination": "SMAD1",
+            "weight": 1.8504861057664694
+        },
+        {
+            "source": "EOMES",
+            "destination": "UTF1",
+            "weight": 1.8454286766515544
+        },
+        {
+            "source": "NANOG",
+            "destination": "NR5A2",
+            "weight": 1.8436312174922285
+        },
+        {
+            "source": "DNMT1",
+            "destination": "EZH2",
+            "weight": 1.8436143467879953
+        },
+        {
+            "source": "CDK2",
+            "destination": "SETDB1",
+            "weight": 1.841553046972256
+        },
+        {
+            "source": "NR0B1",
+            "destination": "SOX2",
+            "weight": 1.8415517738213292
+        },
+        {
+            "source": "LIN28",
+            "destination": "MBD3",
+            "weight": 1.8414250678521438
+        },
+        {
+            "source": "MYC",
+            "destination": "TRP53",
+            "weight": 1.8409676004511284
+        },
+        {
+            "source": "FGF4",
+            "destination": "OTX2",
+            "weight": 1.8389015509123103
+        },
+        {
+            "source": "FGFR2",
+            "destination": "PRMT6",
+            "weight": 1.8386591442521572
+        },
+        {
+            "source": "RCC1",
+            "destination": "SMARCC1",
+            "weight": 1.8345617913093752
+        },
+        {
+            "source": "RCC1",
+            "destination": "WDR5",
+            "weight": 1.8341786649095249
+        }
+    ]
+}
