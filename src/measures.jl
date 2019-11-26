@@ -91,21 +91,33 @@ function assortativity(graph::SimpleGraph, labels_to_groups, groups_to_indices, 
 
 end
 
-# calculate the degree assortativity from InferredNetwork (at threshold)
-# function assortativity(network::InferredNetwork)
-# end
-# function assortativity(network::InferredNetwork, threshold::Int)
-# end
-# function assortativity(network::InferredNetwork, thresholds<:AbstractRange)
-# end
-
-# calculate the label assortativity from InferredNetwork (at thresholds)
-# function assortativity(network::InferredNetwork, nodes_to_groups)
-# end
-# function assortativity(network::InferredNetwork, threshold::Int, nodes_to_groups)
-# end
-# function assortativity(network::InferredNetwork, thresholds<:AbstractRange, nodes_to_groups)
-# end
+### dispatch assortativity on InferredNetwork type
+# calculate the degree assortativity from an InferredNetwork (at threshold)
+assortativity(network::InferredNetwork; excess_degree = false) = assortativity(InferredNetwork_to_LightGraph(set_threshold(network, length(network.edges)))[1], excess_degree = excess_degree)
+assortativity(network::InferredNetwork, threshold::Int; excess_degree = false) = assortativity(InferredNetwork_to_LightGraph(set_threshold(network, threshold))[1], excess_degree = excess_degree)
+function assortativity(network::InferredNetwork, thresholds::AbstractRange; excess_degree = false)
+	assortativities = Vector{AssortativityObject}()
+	for threshold in thresholds
+		push!(assortativities, assortativity(network, threshold, excess_degree = excess_degree))
+	end
+	assortativities
+end
+# calculate the label assortativity from an InferredNetwork (at thresholds)
+function assortativity(network::InferredNetwork, nodes_to_groups, groups_to_indices)
+	graph, ids_to_labels = InferredNetwork_to_LightGraph(set_threshold(network, length(network.edges)))
+	assortativity(graph, nodes_to_groups, groups_to_indices, ids_to_labels)
+end
+function assortativity(network::InferredNetwork, nodes_to_groups, groups_to_indices, threshold::Int)
+	graph, ids_to_labels = InferredNetwork_to_LightGraph(set_threshold(network, threshold))
+	assortativity(graph, nodes_to_groups, groups_to_indices, ids_to_labels)
+end
+function assortativity(network::InferredNetwork, nodes_to_groups, groups_to_indices, thresholds::AbstractRange)
+	assortativities = Vector{AssortativityObject}()
+	for threshold in thresholds
+		push!(assortativities, assortativity(network, nodes_to_groups, groups_to_indices, threshold))
+	end
+	assortativities
+end
 
 function second_neighbour_assortativity(graph::SimpleGraph; excess_degree = false)
 
@@ -191,21 +203,33 @@ function second_neighbour_assortativity(graph::SimpleGraph, labels_to_groups, gr
 
 end
 
-# calculate the second neighbour degree assortativity from InferredNetwork (at threshold)
-# function second_neighbour_assortativity(network::InferredNetwork)
-# end
-# function second_neighbour_assortativity(network::InferredNetwork, threshold::Int)
-# end
-# function second_neighbour_assortativity(network::InferredNetwork, thresholds<:AbstractRange)
-# end
-
-# calculate the second neighbour label assortativity from InferredNetwork (at thresholds)
-# function second_neighbour_assortativity(network::InferredNetwork, nodes_to_groups)
-# end
-# function second_neighbour_assortativity(network::InferredNetwork, threshold::Int, nodes_to_groups)
-# end
-# function second_neighbour_assortativity(network::InferredNetwork, thresholds<:AbstractRange, nodes_to_groups)
-# end
+### dispatch second_neighbour_assortativity on InferredNetwork type
+# calculate the second neighbour degree assortativity from an InferredNetwork (at threshold)
+second_neighbour_assortativity(network::InferredNetwork; excess_degree = false) = second_neighbour_assortativity(InferredNetwork_to_LightGraph(set_threshold(network, length(network.edges)))[1], excess_degree = excess_degree)
+second_neighbour_assortativity(network::InferredNetwork, threshold::Int; excess_degree = false) = second_neighbour_assortativity(InferredNetwork_to_LightGraph(set_threshold(network, threshold))[1], excess_degree = excess_degree)
+function second_neighbour_assortativity(network::InferredNetwork, thresholds::AbstractRange; excess_degree = false)
+	assortativities = Vector{AssortativityObject}()
+	for threshold in thresholds
+		push!(assortativities, second_neighbour_assortativity(network, threshold, excess_degree = excess_degree))
+	end
+	assortativities
+end
+# calculate the second neighbour label assortativity from an InferredNetwork (at thresholds)
+function second_neighbour_assortativity(network::InferredNetwork, nodes_to_groups, groups_to_indices)
+	graph, ids_to_labels = InferredNetwork_to_LightGraph(set_threshold(network, length(network.edges)))
+	second_neighbour_assortativity(graph, nodes_to_groups, groups_to_indices, ids_to_labels)
+end
+function second_neighbour_assortativity(network::InferredNetwork, nodes_to_groups, groups_to_indices, threshold::Int)
+	graph, ids_to_labels = InferredNetwork_to_LightGraph(set_threshold(network, threshold))
+	second_neighbour_assortativity(graph, nodes_to_groups, groups_to_indices, ids_to_labels)
+end
+function second_neighbour_assortativity(network::InferredNetwork, nodes_to_groups, groups_to_indices, thresholds::AbstractRange)
+	assortativities = Vector{AssortativityObject}()
+	for threshold in thresholds
+		push!(assortativities, second_neighbour_assortativity(network, nodes_to_groups, groups_to_indices, threshold))
+	end
+	assortativities
+end
 
 # retrieve community number and communities using the label propagation algorithm
 function get_communities(graph::SimpleGraph)
