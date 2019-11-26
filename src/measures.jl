@@ -92,20 +92,20 @@ function assortativity(graph::SimpleGraph, labels_to_groups, groups_to_indices, 
 end
 
 # calculate the degree assortativity from InferredNetwork (at threshold)
-function assortativity(network::InferredNetwork)
-end
-function assortativity(network::InferredNetwork, threshold::Int)
-end
-function assortativity(network::InferredNetwork, thresholds::AbstractRange)
-end
+# function assortativity(network::InferredNetwork)
+# end
+# function assortativity(network::InferredNetwork, threshold::Int)
+# end
+# function assortativity(network::InferredNetwork, thresholds<:AbstractRange)
+# end
 
 # calculate the label assortativity from InferredNetwork (at thresholds)
-function assortativity(network::InferredNetwork, nodes_to_groups)
-end
-function assortativity(network::InferredNetwork, threshold::Int, nodes_to_groups)
-end
-function assortativity(network::InferredNetwork, thresholds::AbstractRange, nodes_to_groups)
-end
+# function assortativity(network::InferredNetwork, nodes_to_groups)
+# end
+# function assortativity(network::InferredNetwork, threshold::Int, nodes_to_groups)
+# end
+# function assortativity(network::InferredNetwork, thresholds<:AbstractRange, nodes_to_groups)
+# end
 
 function second_neighbour_assortativity(graph::SimpleGraph; excess_degree = false)
 
@@ -192,20 +192,20 @@ function second_neighbour_assortativity(graph::SimpleGraph, labels_to_groups, gr
 end
 
 # calculate the second neighbour degree assortativity from InferredNetwork (at threshold)
-function second_neighbour_assortativity(network::InferredNetwork)
-end
-function second_neighbour_assortativity(network::InferredNetwork, threshold::Int)
-end
-function second_neighbour_assortativity(network::InferredNetwork, thresholds::AbstractRange)
-end
+# function second_neighbour_assortativity(network::InferredNetwork)
+# end
+# function second_neighbour_assortativity(network::InferredNetwork, threshold::Int)
+# end
+# function second_neighbour_assortativity(network::InferredNetwork, thresholds<:AbstractRange)
+# end
 
 # calculate the second neighbour label assortativity from InferredNetwork (at thresholds)
-function second_neighbour_assortativity(network::InferredNetwork, nodes_to_groups)
-end
-function second_neighbour_assortativity(network::InferredNetwork, threshold::Int, nodes_to_groups)
-end
-function second_neighbour_assortativity(network::InferredNetwork, thresholds::AbstractRange, nodes_to_groups)
-end
+# function second_neighbour_assortativity(network::InferredNetwork, nodes_to_groups)
+# end
+# function second_neighbour_assortativity(network::InferredNetwork, threshold::Int, nodes_to_groups)
+# end
+# function second_neighbour_assortativity(network::InferredNetwork, thresholds<:AbstractRange, nodes_to_groups)
+# end
 
 # retrieve community number and communities using the label propagation algorithm
 function get_communities(graph::SimpleGraph)

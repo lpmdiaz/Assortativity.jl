@@ -6,7 +6,7 @@ This package implements the calculation of the assortativity coefficient for inf
 
 This package is based on code originally written by [Thalia Chan](https://github.com/Tchanders). It supports **undirected** networks and primarily relies on [LightGraphs.jl](https://github.com/JuliaGraphs/LightGraphs.jl) and [NetworkInference.jl](https://github.com/Tchanders/NetworkInference.jl) for inferring and storing networks.
 
-The approach taken to look at the assortativity coefficient is to incrementally increase the number of edges in a network, i.e. the edge threshold, starting from 1 and to calculate the assortativity coefficient at each step. More details can be found in the supporting publication. The package also includes additional functionalities not discussed in the publication (e.g. second neighbour assortativity coefficient).
+The approach taken to look at the assortativity coefficient is to gradually increase the number of edges in a network, i.e. the edge threshold, starting from 1 and to calculate the assortativity coefficient at each step. More details can be found in the supporting publication. The package also includes additional functionalities not discussed in the publication (e.g. second neighbour assortativity coefficient).
 
 This package was originally written for gene regulatory networks (node labels then refer to gene names and groups to e.g. biological function) but can work with any type of network.
 
