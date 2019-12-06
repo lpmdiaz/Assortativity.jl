@@ -30,7 +30,7 @@ If calculating label assortativity i.e. assortativity based on custom labelling 
 | group1_node_label2 |        n/a         | group3_node_label2 | ... |
 |        ...         |        n/a         |        ...         | ... |
 
-This means all node labels associated with a given group should be in the same column as that group and that columns can have different length depending on the number of node labels associated with each group. Note that the node labels (e.g. the gene names) in both files must be consistent (e.g. code is case sensitive).
+This means all node labels associated with a given group should be in the same column as that group and that columns can have different lengths depending on the number of node labels associated with each group. Note that the node labels (e.g. the gene names) in both files must be consistent (e.g. code is case sensitive).
 
 ## Installation
 
