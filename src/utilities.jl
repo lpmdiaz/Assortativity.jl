@@ -10,7 +10,7 @@ function load_network(filename::String; ignoreotherline = true)
 
     # read data
     network = readdlm(filename)
-    labels = string.(unique(network[:, 1:2]))
+    labels = string.(unique(network[:, 1:2])) # nodes labels
     nodes_dict = Dict{String,Node}()
     for label in labels
         nodes_dict[label] = Node(label, Float64[], 0, Float64[])
@@ -32,7 +32,7 @@ function load_network(filename::String; ignoreotherline = true)
 
 end
 
-# get a dictionary of nodes labels names to group labels
+# get a dictionary of nodes labels to groups
 function get_labels_to_groups(nodes::Array{Node}, groups_filename::String)
 
     # read in node labels as sorted by group
@@ -43,7 +43,7 @@ function get_labels_to_groups(nodes::Array{Node}, groups_filename::String)
 
     # fill in dictionary with labels in each group
     for group in names(groups)
-        labels = collect(skipmissing(groups[:,group])) # ignore missing values
+        labels = collect(skipmissing(groups[:,group])) # groups labels
         for label in labels
             labels_to_groups[label] = group
         end
@@ -63,7 +63,6 @@ end
 # build a dictionary of group labels to indices
 function get_groups_to_indices(groups)
 
-    # declare dictionary
     groups_to_indices = Dict{Symbol,Int}()
 
     # assign an index to each group
@@ -76,7 +75,9 @@ end
 # make an InferredNetwork at a given edge threshold
 function set_threshold(network::InferredNetwork, threshold::Int)
 
-    threshold > length(network.edges) ? error("edge treshold is greater than edge number (in this case: max. $(length(network.edges)))") : nothing
+    if threshold > length(network.edges)
+		error("edge treshold is greater than edge number (in this case: max. $(length(network.edges)))")
+	end
 
     new_network_edges = network.edges[1:threshold]
     nodes = unique(vcat([edge.nodes[1] for edge in new_network_edges], [edge.nodes[2] for edge in new_network_edges]))
@@ -109,7 +110,7 @@ function InferredNetwork_to_LightGraph(network::InferredNetwork)
 
 end
 
-# convert InferredNetwork to a JSON object that can then be exported
+# convert an InferredNetwork to a JSON object that can then be exported
 function InferredNetwork_to_JSON(network::InferredNetwork, labels_to_groups, groups_to_indices)
 
    # collect relevant data
@@ -129,7 +130,7 @@ function InferredNetwork_to_JSON(network::InferredNetwork, labels_to_groups, gro
 
 end
 
-# export JSON network. use formatted to have tabs
+# export JSON network. use the formatted argument to add tabs in the output file
 function write_JSON_network(JSON_net::Dict, out_path::String; formatted = true)
     formatted ? data = JSON_net : data = JSON.json(JSON_net)
     open(out_path,"w") do f
