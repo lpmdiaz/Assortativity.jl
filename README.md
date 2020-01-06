@@ -88,3 +88,7 @@ The dataset used in the supporting publication is from [[2]](#references) and is
 [1] Newman, M. E. J. (2003). Mixing patterns in networks. *Physical Review E*, 67(2), 13. ([doi](https://doi.org/10.1103/PhysRevE.67.026126))
 
 [2] Stumpf, P. S., Smith, R. C. G., Lenz, M., Schuppert, A., Müller, F.-J., Babtie, A. C., Thalia, E. C., Stumpf, M. P. H., Please, C. P., Howison, S. D., Arai, F. and MacArthur, B. D. (2017). Stem cell differentiation as a non-Markov stochastic process. *Cell Systems*, 5(3), 268–282.  ([doi](https://doi.org/10.1016/j.cels.2017.08.009))
+
+## Note
+
+Also included is the file `assortativity.pdf`, a poster that was presented at the EMBO workshop [*Network inference in biology and disease*](http://meetings.embo.org/event/19-network-inference) that took place at the Telethon Institute of Genetics and Medicine in Pozzuoli, Italy in September 2019.
