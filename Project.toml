@@ -1,10 +1,11 @@
 name = "Assortativity"
 uuid = "ef586a44-145f-508a-9374-89eabc5131cc"
-version = "0.1.0"
 author = ["Leo Diaz"]
+version = "0.1.0"
 
 [deps]
-Combinatorics = "861a8166-3701-5b0c-9a16-15d98fcdc6aa"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+Combinatorics = "861a8166-3701-5b0c-9a16-15d98fcdc6aa"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 LightGraphs = "093fc24a-ae57-5d10-9952-331d41423f4d"
+NetworkInference = "6b44d3db-2bc5-5ac3-b70f-26aa69b1b11b"
