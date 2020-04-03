@@ -73,13 +73,14 @@ function get_groups_to_indices(groups)
 end
 
 # make an InferredNetwork at a given edge threshold
-function set_threshold(network::InferredNetwork, threshold::Int)
+set_threshold(network::InferredNetwork, threshold::Int) = set_threshold(network, (1:threshold))
+function set_threshold(network::InferredNetwork, range::T) where T <: AbstractRange
 
-    if threshold > length(network.edges)
+	if range[end] > length(network.edges)
 		error("edge treshold is greater than edge number (in this case: max. $(length(network.edges)))")
 	end
 
-    new_network_edges = network.edges[1:threshold]
+    new_network_edges = network.edges[range]
     nodes = unique(vcat([edge.nodes[1] for edge in new_network_edges], [edge.nodes[2] for edge in new_network_edges]))
 
     InferredNetwork(nodes, new_network_edges)

@@ -34,7 +34,7 @@ This means all node labels associated with a given group should be in the same c
 
 ## Installation
 
-`using Pkg; Pkg.add("https://github.com/lpmdiaz/Assortativity.jl")`
+`] add https://github.com/lpmdiaz/Assortativity.jl`
 
 ## Functionalities
 
