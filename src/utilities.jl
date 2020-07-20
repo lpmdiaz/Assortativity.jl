@@ -1,4 +1,5 @@
-using CSV: read
+using CSV
+using DataFrames: DataFrame!
 using DelimitedFiles: readdlm
 using JSON
 
@@ -36,7 +37,7 @@ end
 function get_labels_to_groups(nodes::Array{Node}, groups_filename::String)
 
     # read in node labels as sorted by group
-    groups = read(groups_filename, delim='\t')
+    groups = DataFrame!(CSV.File(groups_filename, delim='\t'))
 
     # declare dictionary
     labels_to_groups = Dict{String,Symbol}()
@@ -45,7 +46,7 @@ function get_labels_to_groups(nodes::Array{Node}, groups_filename::String)
     for group in names(groups)
         labels = collect(skipmissing(groups[:,group])) # groups labels
         for label in labels
-            labels_to_groups[label] = group
+            labels_to_groups[label] = Symbol(group)
         end
     end
 
